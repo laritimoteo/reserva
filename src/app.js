@@ -1,10 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
-import  Path  from 'path'
-import routers from './router'
+import  path  from 'path'
+import routes from './router'
 import dotenv from 'dotenv'
-import { threadId } from 'worker_threads'
 
 dotenv.config()
 class app {
@@ -15,7 +14,7 @@ class app {
             useUnifiedTopology: true,
         })
         this.middlewares()
-        this.routes()
+        this.routers()
 
     }
 

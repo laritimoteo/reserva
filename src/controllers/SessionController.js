@@ -16,7 +16,7 @@ class SessionController {
             email:Yup.string().email().required(),
         })
         const { email } = req.body
-        if(!(await Schema.isValid(req.body))) {
+        if(!(await shema.isValid(req.body))) {
             return res.status(400).json({ error: 'Falha na Validação'})
         }
         
